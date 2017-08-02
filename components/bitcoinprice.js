@@ -8,6 +8,7 @@ export default function BitcoinPrice({ data = {}, width, height }) {
     time: k,
     price: data.bpi[k]
   }));
+
   const currentPrice = prices[prices.length - 1].price;
   const firstPrice = prices[0].price;
   const diffPrice = currentPrice - firstPrice;
@@ -23,7 +24,7 @@ export default function BitcoinPrice({ data = {}, width, height }) {
         <div className="spacer" />
         <div className="stats">
           <div className="current">
-            {formatPrice(prices[prices.length - 1].price)}
+            {formatPrice(currentPrice)}
           </div>
           <div className={hasIncreased ? 'diffIncrease' : 'diffDecrease'}>
             {hasIncreased ? '+' : '-'}
@@ -36,7 +37,12 @@ export default function BitcoinPrice({ data = {}, width, height }) {
           data={prices}
           parentWidth={width * 0.6}
           parentHeight={height * 0.45}
-          margin={{ top: 0, bottom: 45, left: 0, right: 0 }}
+          margin={{
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 45
+          }}
         />
       </div>
       <style jsx>{`
