@@ -7,3 +7,12 @@ a collection of free examples by [@hshoff](https://twitter.com/hshoff)
 
 - demo: https://viewsource.now.sh/bitcoin
 - youtube: https://www.youtube.com/watch?v=oeE2tuspdHg
+
+```bash
+git clone https://github.com/hshoff/viewsource.git
+cd viewsource
+npm install
+npm run dev
+
+# => localhost:3000/bitcoin
+```
