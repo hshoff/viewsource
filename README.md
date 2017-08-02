@@ -1,5 +1,5 @@
 # View Source
-a collection of free examples by [@hshoff](https://twitter.com/hshoff)
+a collection of examples by [@hshoff](https://twitter.com/hshoff)
 
 ## 1. Bitcoin price chart
 
