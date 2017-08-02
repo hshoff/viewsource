@@ -1,2 +1,3 @@
 # viewsource
-a collection of free examples
+a collection of free examples by @hshoff
+

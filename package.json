@@ -1,0 +1,31 @@
+{
+  "name": "@hshoff/funcodetime",
+  "version": "1.0.0",
+  "description": "FunTimeCode episodes ",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "@hshoff",
+  "license": "MIT",
+  "dependencies": {
+    "@vx/axis": "0.0.134",
+    "@vx/event": "0.0.127",
+    "@vx/gradient": "0.0.129",
+    "@vx/group": "0.0.127",
+    "@vx/mock-data": "0.0.127",
+    "@vx/pattern": "0.0.127",
+    "@vx/responsive": "0.0.127",
+    "@vx/scale": "0.0.127",
+    "@vx/shape": "0.0.131",
+    "@vx/tooltip": "0.0.134",
+    "d3-array": "^1.2.0",
+    "d3-format": "^1.2.0",
+    "d3-time-format": "^2.0.5",
+    "next": "^3.0.1-beta.20",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
+}
