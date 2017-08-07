@@ -11,7 +11,7 @@ a collection of examples by [@hshoff](https://twitter.com/hshoff)
 
 ## 2. Ethereum candlestick chart
 
-![img](./previews/01-ethereum.png)
+![img](./previews/02-ethereum.png)
 
 - demo: https://viewsource.now.sh/ethereum
 - youtube: coming soon
