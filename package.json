@@ -14,6 +14,7 @@
     "@vx/axis": "0.0.134",
     "@vx/event": "0.0.127",
     "@vx/gradient": "0.0.129",
+    "@vx/grid": "0.0.131",
     "@vx/group": "0.0.127",
     "@vx/mock-data": "0.0.127",
     "@vx/pattern": "0.0.127",
@@ -24,6 +25,7 @@
     "d3-array": "^1.2.0",
     "d3-format": "^1.2.0",
     "d3-time-format": "^2.0.5",
+    "isomorphic-fetch": "^2.2.1",
     "next": "^3.0.1-beta.20",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
