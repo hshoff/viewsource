@@ -92,11 +92,27 @@ class Ethereum extends React.Component {
             decreaseNumItems={this.decreaseNumItems}
           />
         </div>
+        <div className="desc">
+          <div>
+            <small>made with vx</small>
+          </div>
+          <div>
+            <a href="https://vx-demo.now.sh/gallery">
+              <small>vx-demo.now.sh/gallery</small>
+            </a>
+          </div>
+          <div>
+            <a href="https://github.com/hshoff/viewsource">
+              <small>github.com/hshoff/viewsource</small>
+            </a>
+          </div>
+        </div>
         <style jsx>{`
           @import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono');
 
           .ethereum {
             display: flex;
+            flex-direction: column;
             position: absolute;
             top: 0;
             left: 0;
@@ -106,6 +122,12 @@ class Ethereum extends React.Component {
             align-items: center;
             background-color: #f6f0f2;
             font-family: 'Droid Sans Mono', monospace;
+          }
+          .desc {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
           }
           .container {
             height: 75vh;
