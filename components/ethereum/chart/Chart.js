@@ -3,7 +3,7 @@ import { Group } from '@vx/group';
 import { LinearGradient } from '@vx/gradient';
 import { scaleTime, scaleLinear, scaleBand } from '@vx/scale';
 import { GridRows, GridColumns } from '@vx/grid';
-import { AxisLeft, AxisBottom, AxisRight } from '@vx/axis';
+import { AxisLeft, AxisBottom } from '@vx/axis';
 import { Bar } from '@vx/shape';
 import { format } from 'd3-format';
 import { timeFormat } from 'd3-time-format';
