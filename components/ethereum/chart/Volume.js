@@ -10,8 +10,10 @@ export default function Volume({ top, scale, xScale, height, data }) {
         height={height - scale(data.volume)}
         x={xScale(data.closeTime)}
         y={scale(data.volume)}
-        fill="white"
-        fillOpacity={0.3}
+        fill={data.hollow ? 'transparent' : 'white'}
+        stroke={data.hollow ? 'white' : 'transparent'}
+        fillOpacity={0.7}
+        strokeOpacity={0.7}
       />
     </Group>
   );

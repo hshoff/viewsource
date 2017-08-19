@@ -1,5 +1,5 @@
 import 'isomorphic-fetch';
-import { TopCorner, Banner, Chart } from '../components/ethereum';
+import { TopCorner, Banner, Chart, Footer } from '../components/ethereum';
 
 class Ethereum extends React.Component {
   static async getInitialProps() {
@@ -92,21 +92,7 @@ class Ethereum extends React.Component {
             decreaseNumItems={this.decreaseNumItems}
           />
         </div>
-        <div className="desc">
-          <div>
-            <small>made with vx</small>
-          </div>
-          <div>
-            <a href="https://vx-demo.now.sh/gallery">
-              <small>vx-demo.now.sh/gallery</small>
-            </a>
-          </div>
-          <div>
-            <a href="https://github.com/hshoff/viewsource">
-              <small>github.com/hshoff/viewsource</small>
-            </a>
-          </div>
-        </div>
+        <Footer />
         <style jsx>{`
           @import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono');
 
@@ -123,12 +109,6 @@ class Ethereum extends React.Component {
             background-color: #f6f0f2;
             font-family: 'Droid Sans Mono', monospace;
           }
-          .desc {
-            margin-top: 3rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-          }
           .container {
             height: 75vh;
             width: 90vw;
@@ -141,6 +121,7 @@ class Ethereum extends React.Component {
             left: 0;
             right: 0;
             bottom: 0;
+            cursor: crosshair;
           }
           .controls {
           }
