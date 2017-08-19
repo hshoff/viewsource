@@ -61,11 +61,11 @@ export default function Banner({
         <Logo />
       </div>
       <div className="controls">
-        <button onClick={decreaseNumItems}>-</button>
+        <button onClick={increaseNumItems}>+</button>
         <span className="numitems">
           {numItems}
         </span>
-        <button onClick={increaseNumItems}>+</button>
+        <button onClick={decreaseNumItems}>-</button>
       </div>
       <style jsx>{`
         .banner {

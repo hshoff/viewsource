@@ -65,6 +65,7 @@ class Ethereum extends React.Component {
     const minLowPrice = Math.min(
       ...buckets.map(b => Math.min(...[b.lowPrice, b.openPrice, b.closePrice]))
     );
+    const maxVolume = Math.max(...buckets.map(b => b.volume));
 
     const start = sortedBuckets[0].closeTime;
     const end = sortedBuckets[sortedBuckets.length - 1].closeTime;
@@ -79,7 +80,8 @@ class Ethereum extends React.Component {
                 start,
                 end,
                 maxHighPrice,
-                minLowPrice
+                minLowPrice,
+                maxVolume
               }}
             />
           </div>

@@ -7,6 +7,7 @@ import { AxisLeft, AxisBottom } from '@vx/axis';
 import { Bar } from '@vx/shape';
 import { format } from 'd3-format';
 import { timeFormat } from 'd3-time-format';
+import Volume from './Volume';
 
 const formatPrice = format('$,.2f');
 const formatTime = timeFormat('%I:%M%p');
@@ -14,7 +15,7 @@ const formatTime = timeFormat('%I:%M%p');
 class Chart extends React.Component {
   render() {
     const { parentWidth, parentHeight, data } = this.props;
-    const { buckets, start, end, maxHighPrice, minLowPrice } = data;
+    const { buckets, start, end, maxHighPrice, minLowPrice, maxVolume } = data;
 
     const margin = {
       top: 0,
@@ -38,6 +39,12 @@ class Chart extends React.Component {
     const yScale = scaleLinear({
       range: [height - margin.bottom, 20],
       domain: [minLowPrice - 3, maxHighPrice]
+    });
+
+    const volumeHeight = (height - margin.bottom) * 0.25;
+    const yVolumeScale = scaleLinear({
+      range: [volumeHeight, 0],
+      domain: [0, maxVolume]
     });
 
     return (
@@ -95,6 +102,13 @@ class Chart extends React.Component {
                 strokeWidth={1}
                 x={xScale(b.closeTime)}
                 y={b.hollow ? yScale(b.closePrice) : yScale(b.openPrice)}
+              />
+              <Volume
+                top={height - margin.bottom - volumeHeight}
+                height={volumeHeight}
+                scale={yVolumeScale}
+                xScale={xScale}
+                data={b}
               />
             </g>
           );
