@@ -3,7 +3,7 @@ import { Group } from '@vx/group';
 import { LinearGradient } from '@vx/gradient';
 import { scaleTime, scaleLinear, scaleBand } from '@vx/scale';
 import { GridRows, GridColumns } from '@vx/grid';
-import { AxisLeft, AxisBottom } from '@vx/axis';
+import { AxisLeft, AxisBottom, AxisRight } from '@vx/axis';
 import { Bar } from '@vx/shape';
 import { format } from 'd3-format';
 import { timeFormat } from 'd3-time-format';
@@ -113,6 +113,19 @@ class Chart extends React.Component {
             </g>
           );
         })}
+        <Group top={height - margin.bottom - volumeHeight}>
+          <AxisRight
+            scale={yVolumeScale}
+            hideZero
+            hideTicks
+            hideAxisLine
+            tickLength={0}
+            tickValues={yVolumeScale.ticks(5)}
+            tickLabelComponent={
+              <text dx="0.33em" fill="white" fontSize={8} fillOpacity={0.8} />
+            }
+          />
+        </Group>
         <AxisBottom
           top={height - margin.bottom}
           scale={timeScale}
