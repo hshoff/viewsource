@@ -17,6 +17,7 @@ import HoverMarkers from './HoverMarkers';
 const formatPrice = format('$,.2f');
 const formatNumber = format(',.0f');
 const formatTime = timeFormat('%I:%M%p');
+const clamp = (num, min, max) => Math.max(Math.min(num, max), min);
 
 class Chart extends React.Component {
   constructor(props) {
@@ -192,7 +193,7 @@ class Chart extends React.Component {
             onMouseMove={data => event => {
               const { x: xPoint, y: yPoint } = localPoint(this.svg, event);
               const bandWidth = xScale.step();
-              const index = Math.floor(xPoint / bandWidth);
+              const index = clamp(Math.floor(xPoint / bandWidth), 0, buckets.length - 1 );
               const val = buckets[index];
               const left = xScale(val.closeTime);
               this.setState({
